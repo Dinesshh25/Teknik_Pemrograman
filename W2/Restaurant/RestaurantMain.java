@@ -4,18 +4,18 @@ public class RestaurantMain {
     public static void main(String[] args) {
         Restaurant menu = new Restaurant();
 
-        menu.tambahMenuMakanan("Pizza", 250000, 20);
-        Restaurant.nextId();
+        
+        menu.tambahMenuMakanan("Pizza", 250000, 10);
+        menu.tambahMenuMakanan("Spaghetti", 80000, 5);
+        menu.tambahMenuMakanan("Tenderloin Steak", 60000, 2);
 
-        menu.tambahMenuMakanan("Spaghetti", 80000, 20);
-        Restaurant.nextId();
+        menu.tampilMenuMakanan();
 
-        menu.tambahMenuMakanan("Tenderloin Steak", 60000, 30);
-        Restaurant.nextId();
 
-        menu.tambahMenuMakanan("Chicken Steak", 45000, 30);
-
+        System.out.println("\n--- Proses Pemesanan ---");
+        menu.pesanMenuMakanan(0, 4);  
+        menu.pesanMenuMakanan(2, 5);  
+        
         menu.tampilMenuMakanan();
     }
 }
-
